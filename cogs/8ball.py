@@ -21,14 +21,15 @@ class _8ball(commands.Cog):
             "Meh."
         ]
 
-        portal_emotes = random.choice([
+        portal_emotes = [
             "<:Sassy:522184015109947392>",
             "<:Portalsshattyface:594330735976906772>",
             "<:Dilated:552316387188801546>",
             "<:YesIwillkissyou:598732002987868179>",
             ""
-        ])
-        await ctx.send(f"{random.choice(responses)} " + portal_emotes)
+        ]
+
+        await ctx.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
 
 
 def setup(portal):
