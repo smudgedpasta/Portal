@@ -29,6 +29,11 @@ class _8ball(commands.Cog):
             ""
         ]
 
+        for i in ("~~", "***", "**", "*", "||", "__", "```", "'"):
+            if question.startswith(i) and question.endswith(i):
+                await ctx.send(f"{i}{random.choice(responses)}{i}")
+                return
+
         await ctx.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
 
 
