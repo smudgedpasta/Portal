@@ -32,7 +32,7 @@ class _8ball(commands.Cog):
             "Psh, please.",
             "Come back with some soup and then maybe I'll speak to you.",
             "DERE'S A SNAKE IN MAH BOOT!",
-            "You know what matters more? ... Still can't believe Infinite murdered me.",
+            "You know what matters more? The fact that Infinite murdered me.",
             "That makes me so sad.",
             "What is WRONG with you?!",
             "Oh my Solaris, I think I need brain bleach.",
