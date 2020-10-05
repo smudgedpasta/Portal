@@ -52,7 +52,7 @@ class _8ball(commands.Cog):
             "<:Portalsshattyface:594330735976906772>",
             "<:Dilated:552316387188801546>",
             "<:YesIwillkissyou:598732002987868179>",
-            ""
+            "\u200b"
         ]
 
         for i in ("~~", "***", "**", "*", "||", "__", "```", "'"):
