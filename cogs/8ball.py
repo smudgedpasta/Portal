@@ -10,6 +10,10 @@ class _8ball(commands.Cog):
     @commands.command(aliases=["8ball", "ask", "question"], question=None)
     async def AskPortal(self, ctx, question):
 
+        opposite_responses = [
+            "Do you have anything better to do with your time?"
+        ]
+
         responses = [
             "Hell yes.",
             "Sure, whatever.",
@@ -18,7 +22,29 @@ class _8ball(commands.Cog):
             "Do what you want to.",
             "Interesting.",
             "Screw you.",
-            "Meh."
+            "Meh.",
+            "Instead of wasting your time pestering me, you should try drinking some organic oil.",
+            "Maybe the day pigs fly.",
+            "I think you should run.",
+            "Obviosuly, you bass turd.",
+            "You're asking ME?",
+            "I refuse to answer.",
+            "Psh, please.",
+            "Come back with some soup and then maybe I'll speak to you.",
+            "DERE'S A SNAKE IN MAH BOOT!",
+            "You know what matters more? ... Still can't believe Infinite murdered me.",
+            "That makes me so sad.",
+            "What is WRONG with you?!",
+            "Oh my Solaris, I think I need brain bleach.",
+            "Try screaming first.",
+            "Sorry, I can't think right now. I had too many frogs earlier.",
+            "Are you a sadist?",
+            "No, seriously.",
+            "Linkin Park - Hit the Floor.",
+            "I'm sorry.",
+            "I'm not sorry.",
+            "I guess.",
+            f"How about I ask you a question: {random.choice(opposite_responses)}"
         ]
 
         portal_emotes = [
