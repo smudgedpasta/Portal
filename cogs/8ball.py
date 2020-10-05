@@ -26,7 +26,7 @@ class _8ball(commands.Cog):
             "Instead of wasting your time pestering me, you should try drinking some organic oil.",
             "Maybe the day pigs fly.",
             "I think you should run.",
-            "Obviosuly, you bass turd.",
+            "Obviously, you bass turd.",
             "You're asking ME?",
             "I refuse to answer.",
             "Psh, please.",
