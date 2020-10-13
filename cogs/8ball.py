@@ -11,7 +11,11 @@ class _8ball(commands.Cog):
     async def AskPortal(self, ctx, question):
 
         opposite_responses = [
-            "Do you have anything better to do with your time?"
+            "Do you have anything better to do with your time?",
+            "Are you a robot too?",
+            "Do you take care of yourself?",
+            "Divide by zero.",
+            "Are you going to pester me all day long?"
         ]
 
         responses = [
