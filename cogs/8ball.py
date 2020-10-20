@@ -7,7 +7,7 @@ class _8ball(commands.Cog):
         self.portal = portal
 
 
-    @commands.command(aliases=["8ball", "ask", "question"], question=None)
+    @commands.command(aliases=["8ball", "ask"], question=None)
     async def AskPortal(self, ctx, question):
 
         opposite_responses = [
