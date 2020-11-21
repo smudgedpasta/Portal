@@ -119,6 +119,7 @@ async def restart(channel, **void):
 
 async def shutdown(channel, **void):
     await channel.send("`Shutting down...` <:PensiveSonic:731227000219369512>")
+    print("Program terminated.")
     psutil.Process().kill()
 
 portal.run(discord_token)
