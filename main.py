@@ -46,7 +46,7 @@ async def on_message(message):
             if getattr(message.channel, "guild", None) is None and user != portal.user:
                 print(f"{message.author} has asked \"{content}\" in Direct Messages.")
 
-            if content.endswith("?"):
+            if content.endswith("?") and user != portal.user:
 
                 opposite_responses = [
                     "Do you have anything better to do with your time?",
