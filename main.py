@@ -44,7 +44,7 @@ async def on_message(message):
                     return await command(channel=channel)
 
             if getattr(message.channel, "guild", None) is None and user != portal.user:
-                print(f"{message.author} has asked {content} in Direct Messages.")
+                print(f"{message.author} has asked \"{content}\" in Direct Messages.")
 
             if content.endswith("?"):
 
@@ -57,7 +57,7 @@ async def on_message(message):
                     f"""{"".join(y for x in zip(content[::2].lower(), content[1::2].upper()) for y in x if y)}"""
                 ]
 
-                if "why" in content or "is" in content:
+                if "why" in content or "is" in content or "how" in content:
                     responses = [
                         "I don't really care.",
                         "You're asking ME?",
@@ -68,7 +68,7 @@ async def on_message(message):
                         "Meh."
                     ]
 
-                elif "can" in content or "would" in content:
+                elif "can" in content or "would" in content or "does":
                     responses = [
                         "Hell yes.",
                         "Sure, whatever.",
@@ -108,6 +108,7 @@ async def on_message(message):
                 ]
 
                 await channel.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
+                print(f"{user} has asked \"{content}\" in {user.guild}.")
     except:
         print(traceback.format_exc(), end="")
 
