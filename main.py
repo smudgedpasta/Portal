@@ -71,7 +71,7 @@ async def on_message(message):
                         "Meh."
                     ]
 
-                elif "can" in content or "would" in content or "does":
+                elif "can" in content or "would" in content or "does" in content:
                     responses = [
                         "Hell yes.",
                         "Sure, whatever.",
