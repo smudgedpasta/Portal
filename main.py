@@ -7,7 +7,6 @@ import random
 import os
 import psutil
 import traceback
-import time
 import datetime
 
 portal = discord.Client()
