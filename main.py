@@ -112,7 +112,7 @@ async def code_check():
     await portal.wait_until_ready()
     while not portal.is_closed():
         try:
-            print(f"Code is running at {datetime.datetime.utcnow().strftime('%a, %#d %B %Y, %I:%M %p')}, GMT.")
+            print(f"Code is running at {datetime.datetime.utcnow()} GMT.")
         except Exception as e:
             print(e)
         await asyncio.sleep(300)
