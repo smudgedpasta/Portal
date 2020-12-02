@@ -62,38 +62,49 @@ async def on_message(message):
                     f"""{"".join(y for x in zip(content[::2].lower(), content[1::2].upper()) for y in x if y)}"""
                 ]
 
-                responses = [
-                    "I don't really care.",
-                    "You're asking ME?",
-                    "I refuse to answer.",
-                    "Oh my Solaris, I think I need brain bleach.",
-                    "I'm sorry.",
-                    "I'm not sorry.",
-                    "Meh.",
-                    "Hell yes.",
-                    "Sure, whatever.",
-                    "No. Just no.",
-                    "Do what you want to.",
-                    "Maybe the day pigs fly.",
-                    "Obviously, you bass turd.",
-                    "Psh, please.",
-                    "No, seriously.",
-                    "Are you a sadist?",
-                    "I guess.",
-                    "Interesting.",
-                    "Screw you.",
-                    "Instead of wasting your time pestering me, you should try drinking some organic oil.",
-                    "I think you should run.",
-                    "Come back with some soup and then maybe I'll speak to you.",
-                    "DERE'S A SNAKE IN MAH BOOT!",
-                    "You know what matters more? The fact that Infinite murdered me.",
-                    "That makes me so sad.",
-                    "What is WRONG with you?!",
-                    "Try screaming first.",
-                    "Sorry, I can't think right now. I had too many frogs earlier.",
-                    "Linkin Park - Hit the Floor.",
-                    f"How about I ask you a question: {random.choice(opposite_responses)}"
-                ]
+                content = content.lower().split()
+
+                if "why" in content or "is" in content or "how" in content:
+                    responses = [
+                        "I don't really care.",
+                        "You're asking ME?",
+                        "I refuse to answer.",
+                        "Oh my Solaris, I think I need brain bleach.",
+                        "I'm sorry.",
+                        "I'm not sorry.",
+                        "Meh."
+                    ]
+
+                elif "can" in content or "would" in content or "does" in content:
+                    responses = [
+                        "Hell yes.",
+                        "Sure, whatever.",
+                        "No. Just no.",
+                        "Do what you want to.",
+                        "Maybe the day pigs fly.",
+                        "Obviously, you bass turd.",
+                        "Psh, please.",
+                        "No, seriously.",
+                        "Are you a sadist?",
+                        "I guess."
+                    ]
+
+                else:
+                    responses = [
+                        f"How about I ask you a question: {random.choice(opposite_responses)}",
+                        "Interesting.",
+                        "Screw you.",
+                        "Instead of wasting your time pestering me, you should try drinking some organic oil.",
+                        "I think you should run.",
+                        "Come back with some soup and then maybe I'll speak to you.",
+                        "DERE'S A SNAKE IN MAH BOOT!",
+                        "You know what matters more? The fact that Infinite murdered me.",
+                        "That makes me so sad.",
+                        "What is WRONG with you?!",
+                        "Try screaming first.",
+                        "Sorry, I can't think right now. I had too many frogs earlier.",
+                        "Linkin Park - Hit the Floor."
+                    ]
 
                 portal_emotes = [
                     "<:Sassy:522184015109947392>",
