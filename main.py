@@ -72,7 +72,9 @@ async def on_message(message):
                         "Oh my Solaris, I think I need brain bleach.",
                         "I'm sorry.",
                         "I'm not sorry.",
-                        "Meh."
+                        "Meh.",
+                        "Athiests.",
+                        "Wouldn't know. Check Google."
                     ]
 
                 elif "can" in content or "would" in content or "does" in content:
@@ -86,7 +88,9 @@ async def on_message(message):
                         "Psh, please.",
                         "No, seriously.",
                         "Are you a sadist?",
-                        "I guess."
+                        "I guess.",
+                        "Why does that even matter?",
+                        "Uhhh, can I have a cookie instead?"
                     ]
 
                 else:
@@ -103,7 +107,8 @@ async def on_message(message):
                         "What is WRONG with you?!",
                         "Try screaming first.",
                         "Sorry, I can't think right now. I had too many frogs earlier.",
-                        "Linkin Park - Hit the Floor."
+                        "Linkin Park - Hit the Floor.",
+                        "Why would you bring that up?"
                     ]
 
                 portal_emotes = [
