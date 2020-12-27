@@ -93,6 +93,11 @@ async def on_message(message):
                         "Uhhh, can I have a cookie instead?"
                     ]
 
+                elif "chry"  in content or "chrysaor" in content:
+                    responses = [
+                        "Chry? Oh, that sword-loving, helmet-faced schnitzel?"
+                    ]
+
                 else:
                     responses = [
                         f"How about I ask you a question: {random.choice(opposite_responses)}",
