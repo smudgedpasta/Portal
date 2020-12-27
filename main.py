@@ -93,7 +93,7 @@ async def on_message(message):
                         "Uhhh, can I have a cookie instead?"
                     ]
 
-                elif "chry"  in content or "chrysaor" in content:
+                elif "chry" in content or "chrysaor" in content:
                     responses = [
                         "Chry? Oh, that sword-loving, helmet-faced schnitzel?"
                     ]
