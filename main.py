@@ -61,8 +61,8 @@ async def on_message(message):
                     "Are you going to pester me all day long?",
                     f"""{"".join(y for x in zip(content[::2].lower(), content[1::2].upper()) for y in x if y)}"""
                 ]
-
-                content = content.lower().split()
+                
+                content = content.lower().strip("?").split()
 
                 if "why" in content or "is" in content or "how" in content:
                     responses = [
