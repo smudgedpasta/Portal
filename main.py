@@ -125,6 +125,16 @@ async def on_message(message):
                             "What about him?"
                         ]
 
+                    elif "sassy" in words and portal.user.name in words:
+                        responses = [
+                            f"Because {guild.get_member(435245956665966633).name} programmed me this way.",
+                            f"Blame {guild.get_member(521926078403575814).name}'s parenting.",
+                            "Why not?",
+                            "Pssh, like you'd understand.",
+                            "Because I'm a Barbie girl.",
+                            "Because I'm fabulous."
+                        ]
+
                     elif "why" in words or "is" in words or "how" in words or "are" in words:
                         responses = [
                             "I don't really care.",
