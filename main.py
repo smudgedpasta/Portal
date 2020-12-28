@@ -65,36 +65,7 @@ async def on_message(message):
                 
                 content = content.lower().strip("?").split()
 
-                if "why" in content or "is" in content or "how" in content:
-                    responses = [
-                        "I don't really care.",
-                        "You're asking ME?",
-                        "I refuse to answer.",
-                        "Oh my Solaris, I think I need brain bleach.",
-                        "I'm sorry.",
-                        "I'm not sorry.",
-                        "Meh.",
-                        "Athiests.",
-                        "Wouldn't know. Check Google."
-                    ]
-
-                elif "can" in content or "would" in content or "does" in content:
-                    responses = [
-                        "Hell yes.",
-                        "Sure, whatever.",
-                        "No. Just no.",
-                        "Do what you want to.",
-                        "Maybe the day pigs fly.",
-                        "Obviously, you bass turd.",
-                        "Psh, please.",
-                        "No, seriously.",
-                        "Are you a sadist?",
-                        "I guess.",
-                        "Why does that even matter?",
-                        "Uhhh, can I have a cookie instead?"
-                    ]
-
-                elif "ora" in content or portal.get_user(521926078403575814).name.casefold() in content or portal.get_user(521926078403575814).display_name.casefold() in content:
+                if "ora" in content or portal.get_user(521926078403575814).name.casefold() in content or portal.get_user(521926078403575814).display_name.casefold() in content:
                     responses = [
                         "Oh, her? That bitch has such an ego, it makes me look like a street beggar.",
                         "What about my mommy?",
@@ -133,6 +104,35 @@ async def on_message(message):
                         "What about him?",
                         "Yes.",
                         "No."
+                    ]
+
+                elif "why" in content or "is" in content or "how" in content:
+                    responses = [
+                        "I don't really care.",
+                        "You're asking ME?",
+                        "I refuse to answer.",
+                        "Oh my Solaris, I think I need brain bleach.",
+                        "I'm sorry.",
+                        "I'm not sorry.",
+                        "Meh.",
+                        "Athiests.",
+                        "Wouldn't know. Check Google."
+                    ]
+
+                elif "can" in content or "would" in content or "does" in content:
+                    responses = [
+                        "Hell yes.",
+                        "Sure, whatever.",
+                        "No. Just no.",
+                        "Do what you want to.",
+                        "Maybe the day pigs fly.",
+                        "Obviously, you bass turd.",
+                        "Psh, please.",
+                        "No, seriously.",
+                        "Are you a sadist?",
+                        "I guess.",
+                        "Why does that even matter?",
+                        "Uhhh, can I have a cookie instead?"
                     ]
 
                 else:
