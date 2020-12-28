@@ -9,7 +9,9 @@ import psutil
 import traceback
 import datetime
 
-portal = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+portal = discord.Client(intents=intents)
 
 owners = [530781444742578188, 521926078403575814, 201548633244565504]
 #            smudgedpasta         Ora-Allagis            Txin
@@ -22,14 +24,6 @@ with open ("auth.json", "r") as f:
 @portal.event
 async def on_ready():
     await portal.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.playing, name="God and consuming frogs. 🐸"))
-    ora = await portal.fetch_user(521926078403575814)
-    portal._connection._users[ora.id] = ora
-    zei = await portal.fetch_user(156865912631197696)
-    portal._connection._users[zei.id] = zei
-    chry = await portal.fetch_user(263469402865926144)
-    portal._connection._users[chry.id] = chry
-    fliss = await portal.fetch_user(435245956665966633)
-    portal._connection._users[fliss.id] = fliss
     print("Successfully loaded.")
 
 @portal.event
