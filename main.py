@@ -100,7 +100,9 @@ async def on_message(message):
                         "What about my mommy?",
                         "Don't mention  *M Y  M O M*  to me.",
                         "Ora? She actually adopted me. Can't say I'm very close to her.",
-                        "What about her?"
+                        "What about her?",
+                        "Yes.",
+                        "No."
                     ]
 
                 elif "zei" in content or "pun king" in content or portal.get_user(156865912631197696).name.casefold() in content or portal.get_user(156865912631197696).display_name.casefold() in content:
@@ -110,12 +112,17 @@ async def on_message(message):
                         "Oh, Zei? Yeah, he's about my height, weighs less than me, and has lesbian hair.",
                         "Uhhh...",
                         "I'm appauled that you mention such a man in front of me.",
-                        "What about him?"
+                        "What about him?",
+                        "Yes.",
+                        "No."
                     ]
 
                 elif "chry" in content or portal.get_user(263469402865926144).name.casefold() in content or portal.get_user(263469402865926144).display_name.casefold() in content:
                     responses = [
-                        "Chry? Oh, that sword-loving, helmet-faced schnitzel?"
+                        "Chry? Oh, that sword-loving, helmet-faced schnitzel?",
+                        "What about him?",
+                        "Yes.",
+                        "No."
                     ]
 
                 elif "jj" in content or "fliss" in content or portal.get_user(435245956665966633).name.casefold() in content or portal.get_user(435245956665966633).display_name.casefold() in content:
@@ -123,7 +130,9 @@ async def on_message(message):
                         "Nobody knows this, but... When he was a child, he aspired to be a cultist leader.",
                         "Huh? Repeat that again? I lost you at \"Fliss is cool\".",
                         "Oh, Fliss. Cool guy, I guess.",
-                        "What about him?"
+                        "What about him?",
+                        "Yes.",
+                        "No."
                     ]
 
                 else:
