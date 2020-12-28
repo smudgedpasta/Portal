@@ -17,14 +17,24 @@ owners = [530781444742578188, 521926078403575814, 201548633244565504]
 #            smudgedpasta         Ora-Allagis            Txin
 
 discord_token = None
-with open ("auth.json", "r") as f:
+with open("auth.json", "r") as f:
     data = json.load(f)
     discord_token = data["token"]
+
+def has_username(content, words, user, *aliases):
+    if user:
+        for name in (n.lower() for n in (user.name, user.display_name) + aliases):
+            if name:
+                if " " in name:
+                    if name in content:
+                        return True
+                else:
+                    if name in words:
+                        return True
 
 @portal.event
 async def on_ready():
     await portal.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.playing, name="God and consuming frogs. 🐸"))
-    print("Successfully loaded.")
 
 @portal.event
 async def on_message(message):
@@ -42,19 +52,16 @@ async def on_message(message):
                     break
             content = content.strip()
             if user.id in owners:
-                command = globals().get(content.casefold())
+                command = globals().get(content.lower())
                 if callable(command):
                     return await command(channel=channel)
 
-            if getattr(message.channel, "guild", None) is None and user != portal.user:
-                if content.endswith("?") and user != portal.user:
-                    print(f"{message.author} has asked \"{content}\" in Direct Messages.")
-            
-            elif getattr(message.channel, "guild", None) is not None and user != portal.user:
-                if content.endswith("?") or content.endswith("?") and user != portal.user:
-                    print(f"{user} has asked \"{content}\" in {user.guild}.")
-
             if content.endswith("?") and user != portal.user:
+
+                if message.guild is None:
+                    print(f"{message.author} has asked \"{content}\" in Direct Messages.")
+                else:
+                    print(f"{user} has asked \"{content}\" in {message.guild}.")
 
                 opposite_responses = [
                     "Do you have anything better to do with your time?",
@@ -65,50 +72,42 @@ async def on_message(message):
                     f"""{"".join(y for x in zip(content[::2].lower(), content[1::2].upper()) for y in x if y)}"""
                 ]
                 
-                content = content.lower().strip("?").split()
+                content = content.lower().strip("?")
+                words = content.split()
 
-                if "ora" in content or portal.get_user(521926078403575814).name.casefold() in content or portal.get_user(521926078403575814).display_name.casefold() in content:
+                if has_username(content, words, guild.get_member(521926078403575814), "ora"):
                     responses = [
                         "Oh, her? That bitch has such an ego, it makes me look like a street beggar.",
                         "What about my mommy?",
                         "Don't mention  *M Y  M O M*  to me.",
                         "Ora? She actually adopted me. Can't say I'm very close to her.",
-                        "What about her?",
-                        "Yes.",
-                        "No."
+                        "What about her?"
                     ]
 
-                elif "zei" in content or "pun king" in content or portal.get_user(156865912631197696).name.casefold() in content or portal.get_user(156865912631197696).display_name.casefold() in content:
+                elif has_username(content, words, guild.get_member(156865912631197696), "zei"):
                     responses = [
                         "Yuck. Zei...",
                         "What about my mom's loser boyfriend?",
                         "Oh, Zei? Yeah, he's about my height, weighs less than me, and has lesbian hair.",
                         "Uhhh...",
                         "I'm appauled that you mention such a man in front of me.",
-                        "What about him?",
-                        "Yes.",
-                        "No."
+                        "What about him?"
                     ]
 
-                elif "chry" in content or portal.get_user(263469402865926144).name.casefold() in content or portal.get_user(263469402865926144).display_name.casefold() in content:
+                elif has_username(content, words, guild.get_member(263469402865926144), "chry"):
                     responses = [
-                        "Chry? Oh, that sword-loving, helmet-faced schnitzel?",
-                        "What about him?",
-                        "Yes.",
-                        "No."
+                        "Chry? Oh, that sword-loving, helmet-faced schnitzel?"
                     ]
 
-                elif "jj" in content or "fliss" in content or portal.get_user(435245956665966633).name.casefold() in content or portal.get_user(435245956665966633).display_name.casefold() in content:
+                elif has_username(content, words, guild.get_member(435245956665966633), "jj", "fliss"):
                     responses = [
                         "Nobody knows this, but... When he was a child, he aspired to be a cultist leader.",
                         "Huh? Repeat that again? I lost you at \"Fliss is cool\".",
                         "Oh, Fliss. Cool guy, I guess.",
-                        "What about him?",
-                        "Yes.",
-                        "No."
+                        "What about him?"
                     ]
 
-                elif "why" in content or "is" in content or "how" in content:
+                elif "why" in words or "is" in words or "how" in words:
                     responses = [
                         "I don't really care.",
                         "You're asking ME?",
