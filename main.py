@@ -84,7 +84,7 @@ async def on_message(message):
                         "What about her?"
                     ]
 
-                elif has_username(content, words, guild.get_member(156865912631197696), "zei"):
+                elif has_username(content, words, guild.get_member(156865912631197696), "zei", "pun king"):
                     responses = [
                         "Yuck. Zei...",
                         "What about my mom's loser boyfriend?",
@@ -107,7 +107,7 @@ async def on_message(message):
                         "What about him?"
                     ]
 
-                elif "why" in words or "is" in words or "how" in words:
+                elif "why" in words or "is" in words or "how" in words or "are" in words:
                     responses = [
                         "I don't really care.",
                         "You're asking ME?",
