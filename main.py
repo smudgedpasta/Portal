@@ -47,10 +47,12 @@ async def on_message(message):
                     return await command(channel=channel)
 
             if getattr(message.channel, "guild", None) is None and user != portal.user:
-                print(f"{message.author} has asked \"{content}\" in Direct Messages.")
+                if content.endswith("?") and user != portal.user:
+                    print(f"{message.author} has asked \"{content}\" in Direct Messages.")
             
             elif getattr(message.channel, "guild", None) is not None and user != portal.user:
-                print(f"{user} has asked \"{content}\" in {user.guild}.")
+                if content.endswith("?") or content.endswith("?") and user != portal.user:
+                    print(f"{user} has asked \"{content}\" in {user.guild}.")
 
             if content.endswith("?") and user != portal.user:
 
