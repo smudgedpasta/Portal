@@ -128,7 +128,7 @@ async def on_message(message):
                     elif "sassy" in words and "portal" in words:
                         responses = [
                             f"Because {guild.get_member(530781444742578188).name} programmed me this way.",
-                            f"Blame {guild.get_member(521926078403575814).name}'s parenting.",
+                            f"Blame {guild.get_member(521926078403575814).name}' parenting.",
                             f"Blame {guild.get_member(263469402865926144).name} for bringing me in to this world.",
                             "Why not?",
                             "Pssh, like you'd understand.",
