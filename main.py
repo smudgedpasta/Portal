@@ -136,7 +136,7 @@ async def on_message(message):
                             "Because I'm fabulous."
                         ]
 
-                    elif "why" in words or "is" in words or "how" in words or "are" in words:
+                    elif "why" in words or "is" in words or "how" in words or "are" in words or "was" in words:
                         responses = [
                             "I don't really care.",
                             "You're asking ME?",
