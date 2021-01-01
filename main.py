@@ -146,7 +146,9 @@ async def on_message(message):
                             "I'm not sorry.",
                             "Meh.",
                             "Athiests.",
-                            "Wouldn't know. Check Google."
+                            "Wouldn't know. Check Google.",
+                            "Yes.",
+                            "No."
                         ]
 
                     elif "can" in content or "would" in content or "does" in content:
@@ -162,7 +164,9 @@ async def on_message(message):
                             "Are you a sadist?",
                             "I guess.",
                             "Why does that even matter?",
-                            "Uhhh, can I have a cookie instead?"
+                            "Uhhh, can I have a cookie instead?",
+                            "Yes.",
+                            "No."
                         ]
 
                     else:
@@ -180,7 +184,9 @@ async def on_message(message):
                             "Try screaming first.",
                             "Sorry, I can't think right now. I had too many frogs earlier.",
                             "Linkin Park - Hit the Floor.",
-                            "Why would you bring that up?"
+                            "Why would you bring that up?",
+                            "Yes.",
+                            "No."
                         ]
 
                     await channel.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
