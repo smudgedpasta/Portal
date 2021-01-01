@@ -99,7 +99,19 @@ async def on_message(message):
                             "What about my mommy?",
                             "Don't mention  *M Y  M O M*  to me.",
                             "Ora? She actually adopted me. Can't say I'm very close to her.",
-                            "What about her?"
+                            "What about her?",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     elif has_username(content, words, guild.get_member(156865912631197696), "zei", "pun king"):
@@ -109,12 +121,37 @@ async def on_message(message):
                             "Oh, Zei? Yeah, he's about my height, weighs less than me, and has lesbian hair.",
                             "Uhhh...",
                             "I'm appauled that you mention such a man in front of me.",
-                            "What about him?"
+                            "What about him?",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     elif has_username(content, words, guild.get_member(263469402865926144), "chry"):
                         responses = [
-                            "Chry? Oh, that sword-loving, helmet-faced schnitzel?"
+                            "Chry? Oh, that sword-loving, helmet-faced schnitzel?",
+                            "What about him?",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     elif has_username(content, words, guild.get_member(435245956665966633), "jj", "fliss"):
@@ -122,7 +159,19 @@ async def on_message(message):
                             "Nobody knows this, but... When he was a child, he aspired to be a cultist leader.",
                             "Huh? Repeat that again? I lost you at \"Fliss is cool\".",
                             "Oh, Fliss. Cool guy, I guess.",
-                            "What about him?"
+                            "What about him?",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     elif "sassy" in words and "portal" in words:
@@ -148,7 +197,19 @@ async def on_message(message):
                             "Athiests.",
                             "Wouldn't know. Check Google.",
                             "Yes.",
-                            "No."
+                            "No.",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     elif "can" in content or "would" in content or "does" in content:
@@ -166,7 +227,19 @@ async def on_message(message):
                             "Why does that even matter?",
                             "Uhhh, can I have a cookie instead?",
                             "Yes.",
-                            "No."
+                            "No.",
+                            "Oh... Yes.",
+                            "Uuuhhhmmm... Yes?",
+                            "Er, that's a yes.",
+                            "Mhm.",
+                            "Definitely, yes.",
+                            "I believe so.",
+                            "Psh, no. I ain't your therapist.",
+                            "What? No.",
+                            "That is... A big nope.",
+                            "I vote no.",
+                            "Impossible.",
+                            "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
                     else:
