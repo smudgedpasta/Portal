@@ -266,8 +266,6 @@ async def on_message(message):
                             "Sorry, I can't think right now. I had too many frogs earlier.",
                             "Linkin Park - Hit the Floor.",
                             "Why would you bring that up?",
-                            "Yes.",
-                            "No."
                         ]
 
                     await channel.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
