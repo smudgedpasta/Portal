@@ -202,7 +202,7 @@ async def on_message(message):
                             "I'm sorry.",
                             "I'm not sorry.",
                             "Meh.",
-                            "Athiests.",
+                            "Atheists.",
                             "Wouldn't know. Check Google.",
                             "Yes.",
                             "No.",
