@@ -21,6 +21,13 @@ with open("auth.json", "r") as f:
     data = json.load(f)
     discord_token = data["token"]
 
+_print = print
+def print(*args, sep=" ", end="\n"):
+    embed = discord.Embed(colour=discord.Colour(3214259))
+    embed.description = "```ini\n" + str(sep).join(str(i) for i in args) + end + "```"
+    create_task(portal.get_channel(798861277043884082).send(embed=embed))
+    return _print(*args)
+
 def has_username(content, words, user, *aliases):
     if user:
         for name in (n.lower() for n in (user.name, user.display_name) + aliases):
