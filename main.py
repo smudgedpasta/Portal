@@ -8,6 +8,7 @@ import os
 import psutil
 import traceback
 import time
+import datetime
 
 intents = discord.Intents.default()
 intents.members = True
@@ -39,9 +40,29 @@ def has_username(content, words, user, *aliases):
                     if name in words:
                         return True
 
+async def log_update():
+    await portal.wait_until_ready()
+    start_time = time.time()
+    while not portal.is_closed():
+        try:
+            globals()["eloop"] = asyncio.get_event_loop()
+            current_day = str(datetime.datetime.utcnow().date())
+            uptime = datetime.timedelta(time.time() - start_time)
+            current_day = str(datetime.datetime.utcnow().date())
+            new_day = str(datetime.datetime.utcnow().date())
+            if new_day != current_day:
+                current_day = new_day
+                if new_day == True:
+                    print(f"🔹 Current uptime: [{uptime}]")
+        except Exception as e:
+            print(e)
+        await asyncio.sleep(1)
+portal.loop.create_task(log_update())
+
 @portal.event
 async def on_ready():
     await portal.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.playing, name="God and consuming frogs. 🐸"))
+    print("Successfully loaded.")
 
 @portal.event
 async def on_message(message):
