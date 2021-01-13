@@ -8,6 +8,7 @@ import os
 import psutil
 import traceback
 import datetime
+import time
 
 intents = discord.Intents.default()
 intents.members = True
@@ -267,7 +268,9 @@ async def on_message(message):
                             "Linkin Park - Hit the Floor.",
                             "Why would you bring that up?",
                         ]
-
+                    
+                    await channel.trigger_typing()
+                    time.sleep(2)
                     await channel.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
     except:
         print(traceback.format_exc(), end="")
