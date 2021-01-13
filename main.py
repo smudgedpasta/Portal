@@ -25,7 +25,7 @@ _print = print
 def print(*args, sep=" ", end="\n"):
     embed = discord.Embed(colour=discord.Colour(3214259))
     embed.description = "```ini\n" + str(sep).join(str(i) for i in args) + end + "```"
-    create_task(portal.get_channel(798861277043884082).send(embed=embed))
+    asyncio.create_task(portal.get_channel(798861277043884082).send(embed=embed))
     return _print(*args)
 
 def has_username(content, words, user, *aliases):
