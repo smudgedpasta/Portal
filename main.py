@@ -25,7 +25,7 @@ with open("auth.json", "r") as f:
 _print = print
 def print(*args, sep=" ", end="\n"):
     embed = discord.Embed(colour=discord.Colour(3214259))
-    embed.description = "```ini\n" + str(sep).join(str(i) for i in args) + end + "```"
+    embed.description = "```" + str(sep).join(str(i) for i in args) + end + "```"
     asyncio.create_task(portal.get_channel(798861277043884082).send(embed=embed))
     return _print(*args)
 
@@ -53,7 +53,7 @@ async def log_update():
             if new_day != current_day:
                 current_day = new_day
                 if new_day == True:
-                    print(f"🔹 Current uptime: [{uptime}]")
+                    print(f"🔹 Current uptime: {uptime}")
         except Exception as e:
             print(e)
         await asyncio.sleep(1)
@@ -87,9 +87,9 @@ async def on_message(message):
             if content.endswith("?") and user != portal.user:
 
                 if message.guild is None:
-                    print(f"{message.author} has asked \"{content}\" in Direct Messages.")
+                    print(f"{user.name} has asked \"{content}\" in Direct Messages.")
                 else:
-                    print(f"{user} has asked \"{content}\" in {message.guild}.")
+                    print(f"{user.name} has asked \"{content}\" in {message.guild}.")
 
                 opposite_responses = [
                     "Do you have anything better to do with your time?",
