@@ -7,7 +7,6 @@ import random
 import os
 import psutil
 import traceback
-import datetime
 import time
 
 intents = discord.Intents.default()
@@ -274,16 +273,6 @@ async def on_message(message):
                     await channel.send(f"{random.choice(responses)} {random.choice(portal_emotes)}")
     except:
         print(traceback.format_exc(), end="")
-
-async def code_check():
-    await portal.wait_until_ready()
-    while not portal.is_closed():
-        try:
-            print(f"Code is running at {datetime.datetime.utcnow()} GMT.")
-        except Exception as e:
-            print(e)
-        await asyncio.sleep(300)
-portal.loop.create_task(code_check())
 
 async def restart(channel, **void):
     await channel.send("`Restarting...` <:DieOnEggmanBattleShip:522176911418327041>")
