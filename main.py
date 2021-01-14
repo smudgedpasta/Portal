@@ -43,12 +43,11 @@ def has_username(content, words, user, *aliases):
 async def log_update():
     await portal.wait_until_ready()
     start_time = time.time()
+    current_day = str(datetime.datetime.utcnow().date())
     while not portal.is_closed():
         try:
             globals()["eloop"] = asyncio.get_event_loop()
-            current_day = str(datetime.datetime.utcnow().date())
             uptime = datetime.timedelta(time.time() - start_time)
-            current_day = str(datetime.datetime.utcnow().date())
             new_day = str(datetime.datetime.utcnow().date())
             if new_day != current_day:
                 current_day = new_day
