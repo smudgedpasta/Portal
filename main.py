@@ -51,8 +51,7 @@ async def log_update():
             new_day = str(datetime.datetime.utcnow().date())
             if new_day != current_day:
                 current_day = new_day
-                if new_day == True:
-                    print(f"🔹 Current uptime: {uptime}")
+                print(f"🔹 Current uptime: {uptime}")
         except Exception as e:
             print(e)
         await asyncio.sleep(1)
