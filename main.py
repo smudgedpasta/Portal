@@ -106,7 +106,7 @@ async def on_message(message):
                     ""
                 ]
 
-                if content == "?":
+                if set(message.content) == {"#"}
                     _responses = [
                         "Do you think I'm that stupid?",
                         "Ask an actual question.",
