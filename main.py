@@ -106,14 +106,16 @@ async def on_message(message):
                     ""
                 ]
 
-                if set(message) == {"?"}:
+                if set(content) == {"?"}:
                     _responses = [
                         "Do you think I'm that stupid?",
                         "Ask an actual question.",
                         "Congratulations, you can post a question mark."
                     ]
 
-                    await channel.send(f"{random.choice(_responses)} {random.choice(portal_emotes)}")
+                    await channel.trigger_typing()
+                    time.sleep(2)
+                    return await channel.send(f"{random.choice(_responses)} {random.choice(portal_emotes)}")
                 
                 if content != "?":
                     content = content.lower().strip("?")
