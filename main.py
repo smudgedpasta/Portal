@@ -304,11 +304,13 @@ async def on_message(message):
 
 async def restart(channel, **void):
     await channel.send("`Restarting...` <:DieOnEggmanBattleShip:522176911418327041>")
+    await portal.change_presence(status=discord.Status.offline)
     os.system("start cmd /c python main.py")
     psutil.Process().kill()
 
 async def shutdown(channel, **void):
     await channel.send("`Shutting down...` <:PensiveSonic:731227000219369512>")
+    await portal.change_presence(status=discord.Status.offline)
     psutil.Process().kill()
 
 portal.run(discord_token)
