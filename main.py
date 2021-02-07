@@ -221,6 +221,19 @@ async def on_message(message):
                             "Because I'm fabulous."
                         ]
 
+                    elif "when" in words:
+                        responses = [
+                            f"In the year {random.randint(2021, 10001)}.",
+                            f"Ask {guild.get_member(521926078403575814).display_name}.",
+                            "Why would I know?",
+                            "Tomorrow.",
+                            "In a million years.",
+                            "Frankly, I don't care when.",
+                            "I don't know, whenever you want it to happen.",
+                            "Didn't that happen yesterday?",
+                            "Never."
+                        ]
+
                     elif "why" in words or "is" in words or "how" in words or "are" in words or "was" in words:
                         responses = [
                             "I don't really care.",
@@ -276,18 +289,6 @@ async def on_message(message):
                             "I vote no.",
                             "Impossible.",
                             "My answer is that of an innocent man about to be accused of guilt. No."
-                        ]
-
-                    elif "when" in words:
-                        responses = [
-                            f"In the year {random.randint(2021, 10001)}.",
-                            f"Ask {guild.get_member(521926078403575814).display_name}.",
-                            "Why would I know?",
-                            "Tomorrow.",
-                            "In a million years.",
-                            "Frankly, I don't care when.",
-                            "I don't know, whenever you want it to happen.",
-                            "Didn't that happen yesterday?"
                         ]
 
                     else:
