@@ -248,7 +248,7 @@ async def on_message(message):
                             "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
-                    elif "can" in content or "would" in content or "does" in content:
+                    elif "can" in words or "would" in words or "does" in words:
                         responses = [
                             "Hell yes.",
                             "Sure, whatever.",
