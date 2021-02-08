@@ -62,6 +62,14 @@ async def on_ready():
     await portal.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.playing, name="God and consuming frogs. 🐸"))
     print("Successfully loaded.")
 
+portal_emotes = [
+    "<:Sassy:522184015109947392>",
+    "<:Portalsshattyface:594330735976906772>",
+    "<:Dilated:552316387188801546>",
+    "<:YesIwillkissyou:598732002987868179>",
+    ""
+]
+
 @portal.event
 async def on_message(message):
     try:
@@ -70,8 +78,23 @@ async def on_message(message):
         guild = message.guild
         user = message.author
         mentions = (f"<@{portal.user.id}>", f"<@!{portal.user.id}>")
-        if guild is None or channel.id == 522227579520942090 or any(mention in content for mention in mentions):
 
+        # if content == f"<@{portal.user.id}>" or f"<@!{portal.user.id}>":
+        #     respond = [
+        #         f"{user.mention}.",
+        #         "Can you go bother <@239631525350604801> instead?",
+        #         "What?",
+        #         "Why did you ping me?",
+        #         "Can I help you with something?",
+        #         "If you're confused how to use me, just ping me and ask something.",
+        #         "Leave me alone and don't ping me."
+        #     ]
+
+        #     await channel.trigger_typing()
+        #     time.sleep(2)
+        #     await channel.send(f"{random.choice(respond)} {random.choice(portal_emotes)}")
+
+        if guild is None or channel.id == 522227579520942090 or any(mention in content for mention in mentions):
             for mention in mentions:
                 if content.startswith(mention):
                     content = content[len(mention):]
@@ -96,14 +119,6 @@ async def on_message(message):
                     "Divide by zero.",
                     "Are you going to pester me all day long?",
                     f"""{"".join(y for x in zip(content[::2].lower(), content[1::2].upper()) for y in x if y)}"""
-                ]
-
-                portal_emotes = [
-                    "<:Sassy:522184015109947392>",
-                    "<:Portalsshattyface:594330735976906772>",
-                    "<:Dilated:552316387188801546>",
-                    "<:YesIwillkissyou:598732002987868179>",
-                    ""
                 ]
 
                 if set(content) == {"?"}:
