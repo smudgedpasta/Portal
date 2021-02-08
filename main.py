@@ -79,7 +79,7 @@ async def on_message(message):
         user = message.author
         mentions = (f"<@{portal.user.id}>", f"<@!{portal.user.id}>")
 
-        # if content == f"<@{portal.user.id}>" or f"<@!{portal.user.id}>":
+        # if content == any(mentions):
         #     respond = [
         #         f"{user.mention}.",
         #         "Can you go bother <@239631525350604801> instead?",
@@ -92,7 +92,7 @@ async def on_message(message):
 
         #     await channel.trigger_typing()
         #     time.sleep(2)
-        #     await channel.send(f"{random.choice(respond)} {random.choice(portal_emotes)}")
+        #     return await channel.send(f"{random.choice(respond)} {random.choice(portal_emotes)}")
 
         if guild is None or channel.id == 522227579520942090 or any(mention in content for mention in mentions):
             for mention in mentions:
