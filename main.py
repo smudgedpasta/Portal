@@ -224,7 +224,7 @@ async def on_message(message):
                     elif "when" in words:
                         responses = [
                             f"In the year {random.randint(2021, 10001)}.",
-                            f"Ask {guild.get_member(521926078403575814).display_name}.",
+                            f"Ask {random.choice(message.guild.members).display_name}.",
                             "Why would I know?",
                             "Tomorrow.",
                             "In a million years.",
