@@ -224,7 +224,8 @@ async def on_message(message):
                     elif "when" in words:
                         responses = [
                             f"In the year {random.randint(2021, 10001)}.",
-                            f"Ask {random.choice(message.guild.members).display_name}.",
+                            f"Ask {random.choice(message.guild.members).name}.",
+                            f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Why would I know?",
                             "Tomorrow.",
                             "In a million years.",
@@ -236,6 +237,8 @@ async def on_message(message):
 
                     elif "why" in words or "is" in words or "how" in words or "are" in words or "was" in words:
                         responses = [
+                            f"Ask {random.choice(message.guild.members).name}.",
+                            f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "I don't really care.",
                             "You're asking ME?",
                             "I refuse to answer.",
@@ -263,6 +266,8 @@ async def on_message(message):
 
                     elif "can" in words or "would" in words or "does" in words:
                         responses = [
+                            f"Ask {random.choice(message.guild.members).name}.",
+                            f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Hell yes.",
                             "Sure, whatever.",
                             "No. Just no.",
@@ -293,6 +298,7 @@ async def on_message(message):
 
                     else:
                         responses = [
+                            f"Ask {random.choice(message.guild.members).name}.",
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Interesting.",
                             "Screw you.",
