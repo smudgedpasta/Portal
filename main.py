@@ -150,8 +150,7 @@ async def on_message(message):
                     content = content.lower().strip("?")
                     words = content.split()
 
-                    if guild is not None:
-
+                    try:
                         if has_username(content, words, guild.get_member(521926078403575814), "ora"):
                             responses = [
                                 "Oh, her? That bitch has such an ego, it makes me look like a street beggar.",
@@ -240,6 +239,8 @@ async def on_message(message):
                                 "Impossible.",
                                 "My answer is that of an innocent man about to be accused of guilt. No."
                             ]
+                    except:
+                        responses.append("I will not discuss someone behind their back. ~~My code doesn't allow it.~~")
 
                     if "sassy" in words and "portal" in words:
                         responses = [
