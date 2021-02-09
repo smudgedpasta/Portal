@@ -99,7 +99,7 @@ async def on_message(message):
                 "I may be a robot, but your pings get on my nerves."
             ]
 
-            if message.guild is not None:
+            if guild is not None:
                 respond.append(f"Could you go bother {random.choice(message.guild.members).name} instead?")
             else:
                 respond.append(f"Could you go bother someone in a server instead?")
@@ -150,110 +150,112 @@ async def on_message(message):
                     content = content.lower().strip("?")
                     words = content.split()
 
-                    if has_username(content, words, guild.get_member(521926078403575814), "ora"):
-                        responses = [
-                            "Oh, her? That bitch has such an ego, it makes me look like a street beggar.",
-                            "What about my mommy?",
-                            "Don't mention  *M Y  M O M*  to me.",
-                            "Ora? She actually adopted me. Can't say I'm very close to her.",
-                            "What about her?",
-                            "Yes.",
-                            "No.",
-                            "Oh... Yes.",
-                            "Uuuhhhmmm... Yes?",
-                            "Er, that's a yes.",
-                            "Mhm.",
-                            "Definitely, yes.",
-                            "I believe so.",
-                            "Psh, no. I ain't your therapist.",
-                            "What? No.",
-                            "That is... A big nope.",
-                            "I vote no.",
-                            "Impossible.",
-                            "My answer is that of an innocent man about to be accused of guilt. No."
-                        ]
+                    if guild is not None:
 
-                    elif has_username(content, words, guild.get_member(156865912631197696), "zei", "pun king"):
-                        responses = [
-                            "Yuck. Zei...",
-                            "What about my mom's loser boyfriend?",
-                            "Oh, Zei? Yeah, he's about my height, weighs less than me, and has lesbian hair.",
-                            "Uhhh...",
-                            "I'm appauled that you mention such a man in front of me.",
-                            "What about him?",
-                            "Yes.",
-                            "No.",
-                            "Oh... Yes.",
-                            "Uuuhhhmmm... Yes?",
-                            "Er, that's a yes.",
-                            "Mhm.",
-                            "Definitely, yes.",
-                            "I believe so.",
-                            "Psh, no. I ain't your therapist.",
-                            "What? No.",
-                            "That is... A big nope.",
-                            "I vote no.",
-                            "Impossible.",
-                            "My answer is that of an innocent man about to be accused of guilt. No."
-                        ]
+                        if has_username(content, words, guild.get_member(521926078403575814), "ora"):
+                            responses = [
+                                "Oh, her? That bitch has such an ego, it makes me look like a street beggar.",
+                                "What about my mommy?",
+                                "Don't mention  *M Y  M O M*  to me.",
+                                "Ora? She actually adopted me. Can't say I'm very close to her.",
+                                "What about her?",
+                                "Yes.",
+                                "No.",
+                                "Oh... Yes.",
+                                "Uuuhhhmmm... Yes?",
+                                "Er, that's a yes.",
+                                "Mhm.",
+                                "Definitely, yes.",
+                                "I believe so.",
+                                "Psh, no. I ain't your therapist.",
+                                "What? No.",
+                                "That is... A big nope.",
+                                "I vote no.",
+                                "Impossible.",
+                                "My answer is that of an innocent man about to be accused of guilt. No."
+                            ]
 
-                    elif has_username(content, words, guild.get_member(263469402865926144), "chry"):
-                        responses = [
-                            "Chry? Oh, that sword-loving, helmet-faced schnitzel?",
-                            "What about him?",
-                            "Yes.",
-                            "No."
-                            "Oh... Yes.",
-                            "Uuuhhhmmm... Yes?",
-                            "Er, that's a yes.",
-                            "Mhm.",
-                            "Definitely, yes.",
-                            "I believe so.",
-                            "Psh, no. I ain't your therapist.",
-                            "What? No.",
-                            "That is... A big nope.",
-                            "I vote no.",
-                            "Impossible.",
-                            "My answer is that of an innocent man about to be accused of guilt. No."
-                        ]
+                        elif has_username(content, words, guild.get_member(156865912631197696), "zei", "pun king"):
+                            responses = [
+                                "Yuck. Zei...",
+                                "What about my mom's loser boyfriend?",
+                                "Oh, Zei? Yeah, he's about my height, weighs less than me, and has lesbian hair.",
+                                "Uhhh...",
+                                "I'm appauled that you mention such a man in front of me.",
+                                "What about him?",
+                                "Yes.",
+                                "No.",
+                                "Oh... Yes.",
+                                "Uuuhhhmmm... Yes?",
+                                "Er, that's a yes.",
+                                "Mhm.",
+                                "Definitely, yes.",
+                                "I believe so.",
+                                "Psh, no. I ain't your therapist.",
+                                "What? No.",
+                                "That is... A big nope.",
+                                "I vote no.",
+                                "Impossible.",
+                                "My answer is that of an innocent man about to be accused of guilt. No."
+                            ]
 
-                    elif has_username(content, words, guild.get_member(435245956665966633), "jj", "fliss"):
-                        responses = [
-                            "Nobody knows this, but... When he was a child, he aspired to be a cultist leader.",
-                            "Huh? Repeat that again? I lost you at \"Fliss is cool\".",
-                            "Oh, Fliss. Cool guy, I guess.",
-                            "What about him?",
-                            "Yes.",
-                            "No.",
-                            "Oh... Yes.",
-                            "Uuuhhhmmm... Yes?",
-                            "Er, that's a yes.",
-                            "Mhm.",
-                            "Definitely, yes.",
-                            "I believe so.",
-                            "Psh, no. I ain't your therapist.",
-                            "What? No.",
-                            "That is... A big nope.",
-                            "I vote no.",
-                            "Impossible.",
-                            "My answer is that of an innocent man about to be accused of guilt. No."
-                        ]
+                        elif has_username(content, words, guild.get_member(263469402865926144), "chry"):
+                            responses = [
+                                "Chry? Oh, that sword-loving, helmet-faced schnitzel?",
+                                "What about him?",
+                                "Yes.",
+                                "No."
+                                "Oh... Yes.",
+                                "Uuuhhhmmm... Yes?",
+                                "Er, that's a yes.",
+                                "Mhm.",
+                                "Definitely, yes.",
+                                "I believe so.",
+                                "Psh, no. I ain't your therapist.",
+                                "What? No.",
+                                "That is... A big nope.",
+                                "I vote no.",
+                                "Impossible.",
+                                "My answer is that of an innocent man about to be accused of guilt. No."
+                            ]
 
-                    elif "sassy" in words and "portal" in words:
+                        elif has_username(content, words, guild.get_member(435245956665966633), "jj", "fliss"):
+                            responses = [
+                                "Nobody knows this, but... When he was a child, he aspired to be a cultist leader.",
+                                "Huh? Repeat that again? I lost you at \"Fliss is cool\".",
+                                "Oh, Fliss. Cool guy, I guess.",
+                                "What about him?",
+                                "Yes.",
+                                "No.",
+                                "Oh... Yes.",
+                                "Uuuhhhmmm... Yes?",
+                                "Er, that's a yes.",
+                                "Mhm.",
+                                "Definitely, yes.",
+                                "I believe so.",
+                                "Psh, no. I ain't your therapist.",
+                                "What? No.",
+                                "That is... A big nope.",
+                                "I vote no.",
+                                "Impossible.",
+                                "My answer is that of an innocent man about to be accused of guilt. No."
+                            ]
+
+                    if "sassy" in words and "portal" in words:
                         responses = [
-                            f"Because {guild.get_member(530781444742578188).name} programmed me this way.",
-                            f"Blame {guild.get_member(521926078403575814).name}' parenting.",
-                            f"Blame {guild.get_member(263469402865926144).name} for bringing me in to this world.",
+                            f"Because {portal.get_user(530781444742578188).name} programmed me this way.",
+                            f"Blame {portal.get_user(521926078403575814).name}' parenting.",
+                            f"Blame {portal.get_user(263469402865926144).name} for bringing me in to this world.",
                             "Why not?",
                             "Pssh, like you'd understand.",
                             "Because I'm a Barbie girl.",
                             "Because I'm fabulous."
                         ]
 
+
                     elif "when" in words:
                         responses = [
                             f"In the year {random.randint(2021, 10001)}.",
-                            f"Ask {random.choice(message.guild.members).name}.",
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Why would I know?",
                             "Tomorrow.",
@@ -266,7 +268,6 @@ async def on_message(message):
 
                     elif "why" in words or "is" in words or "how" in words or "are" in words or "was" in words:
                         responses = [
-                            f"Ask {random.choice(message.guild.members).name}.",
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "I don't really care.",
                             "You're asking ME?",
@@ -295,7 +296,6 @@ async def on_message(message):
 
                     elif "can" in words or "would" in words or "does" in words:
                         responses = [
-                            f"Ask {random.choice(message.guild.members).name}.",
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Hell yes.",
                             "Sure, whatever.",
@@ -327,7 +327,6 @@ async def on_message(message):
 
                     else:
                         responses = [
-                            f"Ask {random.choice(message.guild.members).name}.",
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Interesting.",
                             "Screw you.",
@@ -343,6 +342,11 @@ async def on_message(message):
                             "Linkin Park - Hit the Floor.",
                             "Why would you bring that up?",
                         ]
+
+                    if guild is not None:
+                        responses.append(f"Ask {random.choice(message.guild.members).name}.")
+                    else:
+                        responses.append(f"Ask someone in a server.")
                     
                     await channel.trigger_typing()
                     time.sleep(2)
