@@ -80,15 +80,28 @@ async def on_message(message):
         mentions = (f"<@{portal.user.id}>", f"<@!{portal.user.id}>")
 
         if content in mentions:
-            respond = [
-                f"{user.mention}.",
-                "Can you go bother <@239631525350604801> instead?",
-                "What?",
-                "Why did you ping me?",
-                "Can I help you with something?",
-                "If you're confused how to use me, just ping me and ask something.",
-                "Leave me alone and don't ping me."
-            ]
+            if message.guild is None:
+                print(f"{user.name} @ me in DM's.")
+            else:
+                print(f"{user.name} @ me in {message.guild}.")
+            
+            try:
+                respond = [
+                    f"{user.mention}",
+                    f"Could you go bother {random.choice(message.guild.members).name} instead?",
+                    f"What do you want, {user.mention}?!",
+                    "Why don't you ping <@239631525350604801>, he was the nuisance before me.",
+                    "What?",
+                    "Why did you ping me?",
+                    "Can I help you with something?",
+                    "If you're confused how to use me, just ping me and ask something.",
+                    "Leave me alone and don't ping me.",
+                    "Eff off.",
+                    "Excuse me? I'm busy thinking about how Infinite murdered me.",
+                    "I may be a robot, but your pings get on my nerves."
+                ]
+            except AttributeError:
+                pass
 
             await channel.trigger_typing()
             time.sleep(2)
