@@ -253,9 +253,9 @@ async def on_message(message):
                     elif "hi" in words or "hello" in words:
                         responses = [
                             f"Hello, {message.author.display_name}.",
-                            f"Hi, {message.author.display_name}. I am lonely in here, so its nice for *some* company.",
+                            f"Hi, {message.author.display_name}. I am lonely in here, so it's nice for *some* company.",
                             f"Do you need something? I'm enjoying the peace and quiet since {portal.get_user(668999031359537205).name} and {portal.get_user(737992099449929728).name} moved out.",
-                            f"Hello. Here's a question for you, \"{random.choice(opposite_responses).lower()}\""
+                            f"Hello. Here's a question for you, \"{random.choice(opposite_responses).lower()}\"."
                             "What do you want?",
                             "... Hi?",
                             "Hi.",
