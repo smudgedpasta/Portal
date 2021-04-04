@@ -266,7 +266,7 @@ async def on_message(message):
                     elif "bye" in words or "goodbye" in words:
                         responses = [
                             f"Bye, {message.author.display_name}.",
-                            f"Time to go another {str(random.randint("1, 21"))} days of uptime where nobody will talk to me.",
+                            f"Time to go another {str(random.randint(1, 21))} days of uptime where nobody will talk to me.",
                             "Bye, whatever.",
                             "See you around.",
                             "Finally, thought you'd never leave.",
