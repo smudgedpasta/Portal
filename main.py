@@ -29,6 +29,9 @@ def print(*args, sep=" ", end="\n"):
     asyncio.create_task(portal.get_channel(798861277043884082).send(embed=embed))
     return _print(*args)
 
+def charsplit(content):
+    return list(content)
+
 def has_username(content, words, user, *aliases):
     if user:
         for name in (n.lower() for n in (user.name, user.display_name) + aliases):
@@ -148,7 +151,7 @@ async def on_message(message):
                 
                 if content != "?":
                     content = content.lower().strip("?")
-                    words = content.split()
+                    words = charsplit(content)
 
                     if guild is not None and has_username(content, words, guild.get_member(521926078403575814), "ora"):
                         responses = [
