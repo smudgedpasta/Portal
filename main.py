@@ -148,7 +148,7 @@ async def on_message(message):
                 
                 if content != "?":
                     content = content.lower().strip("?")
-                    words = list(content)
+                    words = content.split()
 
                     if guild is not None and has_username(content, words, guild.get_member(521926078403575814), "ora"):
                         responses = [
