@@ -9,6 +9,7 @@ import psutil
 import traceback
 import time
 import datetime
+import re
 
 intents = discord.Intents.default()
 intents.members = True
@@ -148,7 +149,7 @@ async def on_message(message):
                 
                 if content != "?":
                     content = content.lower().strip("?")
-                    words = content.split()
+                    words = re.sub(r"\W+", " ", content).split()
 
                     if guild is not None and has_username(content, words, guild.get_member(521926078403575814), "ora"):
                         responses = [
