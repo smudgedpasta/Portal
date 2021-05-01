@@ -148,7 +148,7 @@ async def on_message(message):
                     return await channel.send(f"{random.choice(_responses)} {random.choice(portal_emotes)}")
                 
                 if content != "?":
-                    content = content.lower().strip("?")
+                    content = content.lower().strip("?").strip(mention)
                     words = re.sub(r"\W+", " ", content).split()
 
                     if guild is not None and has_username(content, words, guild.get_member(521926078403575814), "ora"):
@@ -318,7 +318,7 @@ async def on_message(message):
                             "My answer is that of an innocent man about to be accused of guilt. No."
                         ]
 
-                    elif "can" in words or "would" in words or "does" in words:
+                    elif "can" in words or "would" in words or "does" in words or "should" in words:
                         responses = [
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Hell yes.",
