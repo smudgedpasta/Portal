@@ -280,6 +280,8 @@ async def on_message(message):
                     elif "when" in words:
                         responses = [
                             f"In the year {random.randint(2021, 10001)}.",
+                            f"In {random.randint(3, 11)} minutes.",
+                            f"Wait {random.randint(5, 11)} hours."
                             f"How about I ask you a question: {random.choice(opposite_responses)}",
                             "Why would I know?",
                             "Tomorrow.",
@@ -287,7 +289,13 @@ async def on_message(message):
                             "Frankly, I don't care when.",
                             "I don't know, whenever you want it to happen.",
                             "Didn't that happen yesterday?",
-                            "Never."
+                            "Never.",
+                            "How about an hour?",
+                            "Maybe tomorrow?",
+                            "Try next week, h u n n y.",
+                            "When you can count all of your toes and fingers.",
+                            "I dunno.",
+                            "Go without food for a while and when you finally feel hungry, do whatever that is."
                         ]
 
                     elif "why" in words or "is" in words or "how" in words or "are" in words or "was" in words:
